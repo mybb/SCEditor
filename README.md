@@ -1,6 +1,5 @@
 # [SCEditor](http://www.sceditor.com/) v2.1.2
 
-[![Dependency Status](http://img.shields.io/gemnasium/mybb/SCEditor.svg?style=flat-square)](https://gemnasium.com/samclarke/SCEditor)
 [![SemVer](http://img.shields.io/:semver-✓-brightgreen.svg?style=flat-square)](http://semver.org)
 [![License](http://img.shields.io/npm/l/sceditor.svg?style=flat-square)](https://github.com/samclarke/SCEditor/blob/master/LICENSE.md)
 
