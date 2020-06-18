@@ -291,12 +291,7 @@ module.exports = (grunt) => {
 			build: {
 				options: {
 					processors: [
-						require('autoprefixer')({
-							browsers: [
-								'last 4 versions',
-								'ie 10'
-							]
-						}),
+						require('autoprefixer'),
 						require('postcss-clean')({
 							level: 2,
 							compatibility: 'ie9'
