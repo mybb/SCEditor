@@ -1480,6 +1480,11 @@ export default function SCEditor(original, userOptions) {
 		var isIeOrEdge = IE_VER || browser.edge;
 		var editable = wysiwygBody;
 		var clipboard = e.clipboardData;
+
+		if (!options.enablePasteFiltering) {
+			return;
+		}
+
 		var loadImage = function (file) {
 			var reader = new FileReader();
 			reader.onload = function (e) {
@@ -1502,7 +1507,8 @@ export default function SCEditor(original, userOptions) {
 
 			for (var i = 0; i < types.length; i++) {
 				// Normalise image pasting to paste as a data-uri
-				if (globalWin.FileReader && items &&
+				if (options.enableImagePasteFiltering &&
+					globalWin.FileReader && items &&
 					IMAGE_MIME_REGEX.test(items[i].type)) {
 					return loadImage(clipboard.items[i].getAsFile());
 				}

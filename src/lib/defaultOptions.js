@@ -232,6 +232,14 @@ export default {
 	enablePasteFiltering: false,
 
 	/**
+	 * If to enable normalise image pasting to paste as a data-uri.
+	 * Only takes effect if enablePasteFiltering is true.
+	 *
+	 * @type {boolean}
+	 */
+	enableImagePasteFiltering: true,
+
+	/**
 	 * If to completely disable pasting into the editor
 	 *
 	 * @type {boolean}
