@@ -292,9 +292,8 @@ module.exports = (grunt) => {
 				options: {
 					processors: [
 						require('autoprefixer'),
-						require('postcss-clean')({
-							level: 2,
-							compatibility: 'ie9'
+						require('cssnano')({
+							preset: 'default'
 						})
 					]
 				},
@@ -343,7 +342,7 @@ module.exports = (grunt) => {
 	});
 
 
-	grunt.loadNpmTasks('grunt-postcss');
+	grunt.loadNpmTasks('@lodder/grunt-postcss');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-compress');
 	grunt.loadNpmTasks('grunt-contrib-concat');
