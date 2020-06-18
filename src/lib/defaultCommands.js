@@ -553,7 +553,7 @@ var defaultCmds = {
 							'<a href="' +
 							'mailto:' + escape.entities(email) + '">' +
 								escape.entities((text || email)) +
-							'</a>'
+							'</a><span></span>'
 						);
 					} else {
 						editor.execCommand('createlink', 'mailto:' + email);
@@ -613,7 +613,7 @@ var defaultCmds = {
 					editor.wysiwygEditorInsertHtml(
 						'<a href="' + escape.entities(url) + '">' +
 							escape.entities(text) +
-						'</a>'
+						'</a><span></span>'
 					);
 				} else {
 					editor.execCommand('createlink', url);
